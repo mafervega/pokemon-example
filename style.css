@@ -1,0 +1,12 @@
+body{
+    background-color: #DC143C;
+}
+div{
+    background-color: aqua;
+    width: 50%;
+    height: 10%;
+    display: flex;
+}
+.pokemon{
+    color: blue;
+}
