@@ -1,12 +1,19 @@
 body{
     background-color: #DC143C;
 }
-div{
-    background-color: aqua;
-    width: 50%;
-    height: 10%;
+.logo2{
+    width: 200px;
+}
+.card{
+    width: 25%; 
+    height: 150px; 
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue; 
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 0.5px solid black; 
+    border-radius: 10px;
 }
-.pokemon{
-    color: blue;
-}
+

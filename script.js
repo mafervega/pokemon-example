@@ -1,8 +1,8 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const link = "https://pokeapi.co/api/v2/pokemon/";
-    const poke = document.querySelector("#luis");
+    const cards = document.querySelector("#card");
 
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 5; i++) {
         fetch(link + i)
             .then((res) => res.json())
             .then((data) => look(data))
@@ -11,7 +11,7 @@
 
     function look(data) {
         const div = document.createElement("div");
-        div.classList.add("pokemon");
+        div.classList.add("card");
 
         div.innerHTML = `
             <p class="poke_name">N: ${data.id}</p>
@@ -20,10 +20,11 @@
             </div>
             <div class="poke_info">
                 <h2 class="poke_name">${data.name}</h2>
+                <p class=""class_poke>tipo: </p>
+
             </div>
         `;
 
-        poke.append(div);
+        cards.append(div);
     }
 });
-*/
