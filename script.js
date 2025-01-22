@@ -9,26 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch((error) => console.error("Error:", error));
     }
 
-    function look(info) {
-        let tipos = info.types.map((type)=>
-            `<p class="tipo">tipo:${type.type.name}</p>`);
-            tipos= tipos.join("")      
-        const div = document.createElement("div");
-        div.classList.add("card");
+function look(info) {
+    let tipos = info.types.map((type)=>
+        `<p class="${type.type.name}">tipo:${type.type.name}</p>`);
+        tipos= tipos.join("")    
 
-        div.innerHTML = `
-            <p class="poke_name">N: ${info.id}</p>
-            <div class="poke_ima">
-                <img src="${info.sprites.front_default}" alt="${info.name}" />
-            </div>
-            <div class="poke_info">
-                <h2 class="poke_name">${info.name}</h2>
-                ${tipos}
-                <p class="species">especie: </p>
-                <p class="weight">peso: ${info.weight}kg</p>
-                <p class="abilities">habilidades:  </p>
-            </div>
-        `;
-        cards.append(div);
-    }
-});
+    const div = document.createElement("div");
+    div.classList.add("card");
+
+    div.innerHTML = `
+        <p class="poke_name">N: ${info.id}</p>
+        <div class="poke_ima">
+            <img src="${info.sprites.front_default}" alt="${info.name}" />
+        </div>
+        <div class="poke_info">
+            <h2 class="poke_name">${info.name}</h2>
+        </div>
+        <div class"tipo">${tipos}</div>
+        <div>
+            <p class="weight">peso: ${info.weight}kg</p>
+        </div>
+    `;
+cards.append(div);
+}});
